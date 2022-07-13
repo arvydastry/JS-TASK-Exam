@@ -8,5 +8,33 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
-cxcxc;
-dsfdfsf;
+
+const converterForm = document.querySelector("form");
+
+converterForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const kilogram = document.getElementById("search");
+
+  const svarai = kilogramTosvarai(kilogram.value);
+
+  const grams = kilogramToGrams(kilogram.value);
+
+  const uncies = kilogramToUncies(kilogram.value);
+
+  const output = document.getElementById("output");
+
+  output.textContent = `Svarai: ${svarai}, Gramai: ${grams}, Uncijos: ${uncies}`;
+});
+
+function kilogramTosvarai(kilogram) {
+  return kilogram * 2.2046;
+}
+
+function kilogramToGrams(kilogram) {
+  return Number(kilogram) / 0.001;
+}
+
+function kilogramToUncies(kilogram) {
+  return Number(kilogram) * 35.274;
+}
