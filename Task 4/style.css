@@ -27,3 +27,23 @@
   margin-top: 50px;
   color: #333;
 }
+
+.card { 
+  width: 49%;
+  min-height: 200px;
+  background-color: rgb(191, 255, 252);
+  margin-bottom: 30px;
+  padding: 16px;
+  padding-left: 32px;
+  border-radius: 10px;
+  border-color: #333; 
+  }
+
+  #output {
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 24px; 
+    margin: 50px;  
+    }
